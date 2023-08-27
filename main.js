@@ -254,7 +254,7 @@ onUpdate(() => {
         camPos(player.pos.x, cameraVerticalOffset)
     }
 
-    if (player.curAnim() !== 'run-anim' && player.isGrounded()) {
+    if (player.curAnim() === 'fall-anim' && player.isGrounded()) {
         player.use(sprite('idle-sprite'))
         player.play('idle-anim')
     }
